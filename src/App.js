@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import { LanguageProvider } from './context/LanguageContext';
+import { ThemeProvider } from './context/ThemeContext';
+import Header from './components/Header';
+import MainMenu from './components/MainMenu';
+import Error404 from './components/Error404';
+import Dice from './pages/Dice';
+import GroupRaffle from './pages/GroupRaffle';
+import InterchangeRaffle from './pages/InterchangeRaffle';
+import RandomValue from './pages/RandomValue';
+import Roulette from './pages/Roulette';
+import RoundRobin from './pages/RoundRobin';
+import SequenceRaffle from './pages/SequenceRaffle';
+import './pages/style.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ThemeProvider >
+        <LanguageProvider >
+          <HashRouter >
+            <Header />
+            <Routes >
+              <Route path='interchangeRaffle' element={<InterchangeRaffle />} />
+              <Route path='groupRaffle' element={<GroupRaffle />} />
+              <Route path='sequenceRaffle' element={<SequenceRaffle />} />
+              <Route path='roundRobin' element={<RoundRobin />} />
+              <Route path='randomValue' element={<RandomValue />} />
+              <Route path='dice' element={<Dice />} />
+              <Route path='roulette' element={<Roulette />} />
+              <Route exact path='/' element={<MainMenu />} />
+              <Route path='*' element={<Error404 />} />
+            </Routes>
+          </HashRouter>
+        </LanguageProvider>
+      </ThemeProvider>
     </div>
   );
 }

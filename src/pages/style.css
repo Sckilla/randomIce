@@ -1,0 +1,116 @@
+
+.section-container{
+  width: 800px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+/* START THEMES */
+.section-container.light{
+  color: var(--dark-blue);
+}
+.section-container.dark{
+  color: var(--white);
+}
+/* END THEMES */
+
+.app-container{
+  width: fit-content;
+  margin: 0 auto;
+}
+
+form .input{
+  display: inline-block;
+  padding: .5rem;
+}
+form .input label{
+  font-size: small;
+  font-weight: bold;
+  display: block;
+  margin-bottom: .1rem;
+}
+form .input input[type="text"],
+form .input input[type="number"],
+form .input button{
+  width: 100%;
+  padding: .5rem;
+  border-radius: .5rem;
+  background: none;
+  outline: none;
+  border: none;
+  transition: background .3s;
+}
+form .input input[type="text"]:focus,
+form .input input[type="number"]:focus{
+  background: #7c7c7c3f;
+  -moz-appearance: textfield;
+}
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    display: none;
+  }
+form .input button{
+  cursor: pointer;
+}
+form .input button:hover{
+  background: #7c7c7c3f;
+}
+
+/* START THEMES */
+.section-container.light form .input input[type="text"],
+.section-container.light form .input input[type="number"],
+.section-container.light form .input button{
+  color: var(--dark-blue);
+  border: var(--border) solid var(--dark-blue);
+}
+.section-container.dark form .input input[type="text"],
+.section-container.dark form .input input[type="number"],
+.section-container.dark form .input button{
+  color: var(--white);
+  border: var(--border) solid var(--white);
+}
+/* END THEMES */
+
+.section-container.dark form .input input[type="text"].error,
+.section-container.dark form .input input[type="number"].error{
+  border: var(--border) solid var(--red-error);
+}
+
+.message{
+  max-width: fit-content;
+  padding: 0;
+  font-size: small;
+  font-weight: bold;
+  opacity: 0;
+  height: 0;
+  transition: height 3s ease;
+}
+.message.error{
+  color: var(--red-error);
+}
+.message.active{
+  padding: .3rem;
+  height: auto;
+  opacity: 1;
+}
+
+.app-container .result{
+  width: 100%;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.app-container .result span{
+  font-size: xx-large;
+  display: block;
+  margin-top: .5rem;
+  font-weight: bolder;
+}
+
+/* START THEMES */
+.section-container.light .app-container .result span{
+  color: var(--light-blue);
+}
+.section-container.dark .app-container .result span{
+  color: var(--cyan);
+}
+/* END THEMES */

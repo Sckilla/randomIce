@@ -116,6 +116,31 @@ const strings = {
     },
     sequenceRaffle:{
       sequenceRaffle: 'Sequence raffle',
+      members: "Members",
+      infoNoMembersAdded: "No members added",
+      calculate: 'Calculate',
+      form:{
+        addAMember: "Add a member",
+        name: "Name",
+        add: 'Add',
+        errorFields: 'The name is not valid',
+      },
+      loadMembers:{
+        loadFromSaves:'Load from saves',
+        infoNoDataSaved:'No collections saved',
+        load:'Load',
+        delete:'Delete',
+      },
+      saveMembers:{
+        errorRepitedState: 'This name has been already used',
+        errorActionReplace: 'Click here to replace it',
+        saveState: 'Save members',
+        saveStateAs: 'Save members as',
+      },
+      result:{
+        order: 'Order',
+        name: 'Name'
+      },
     },
     roundRobin:{
       roundRobin: 'Round robin',
@@ -244,6 +269,31 @@ const strings = {
     },
     sequenceRaffle:{
       sequenceRaffle: 'Sorteo de orden',
+      members: "Integrantes",
+      infoNoMembersAdded: "No se han agregado integrantes",
+      calculate: 'Calcular',
+      form:{
+        addAMember: "Agrega un miembro",
+        name: "Nombre",
+        add: 'Agregar',
+        errorFields: 'Nombre no válido',
+      },
+      loadMembers:{
+        loadFromSaves:'Cargar desde guardados',
+        infoNoDataSaved:'No hay listas guardadas',
+        load:'Cargar',
+        delete:'Eliminar',
+      },
+      saveMembers:{
+        errorRepitedState: 'Este nombre ya ha sido usado',
+        errorActionReplace: 'Haz click aquí para reemplazar',
+        saveState: 'Guardar lista',
+        saveStateAs: 'Guardar lista como',
+      },
+      result:{
+        order: 'Orden',
+        name: 'Nombre'
+      },
     },
     roundRobin:{
       roundRobin: 'Sorteo por turnos',

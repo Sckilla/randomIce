@@ -1,0 +1,21 @@
+.result-view{
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  height: 60vh;
+}
+
+.result-view h2{
+  padding-top: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.result-view h2 span{
+  color: var(--cyan);
+}
+
+.result-view h2 span.recipient{
+  margin-top: 1rem;
+  font-size: 3rem;
+}

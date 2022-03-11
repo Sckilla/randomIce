@@ -1,3 +1,4 @@
+import helpRandom from "./helpRandom";
 import helpRegex from "./helpRegex";
 
 export default function helpRandomValue() {
@@ -25,7 +26,6 @@ export default function helpRandomValue() {
       error.msg = "errorValuesRangeMinimum";
       error.badValuesFields = ['minimum'];
     }
-    console.log(error);
     return error;
   };
 
@@ -34,7 +34,7 @@ export default function helpRandomValue() {
     let minimum = parseFloat(values.minimum);
     let interval = parseFloat(values.interval);
     let realMaximum = maximum - (maximum % interval) + interval;
-    let randValue = Math.random() * (realMaximum - minimum) + minimum;
+    let randValue = helpRandom(realMaximum,minimum);
     let intervalDecimals = (String(values.interval).split('.')[1]);
     if(intervalDecimals){
       let res = randValue - randValue % interval;
@@ -55,7 +55,7 @@ export default function helpRandomValue() {
 
   const calcRandomCollection = (values) => {
     let collection = values.values.split(',');
-    let randValue = Math.floor(Math.random() * (collection.length));
+    let randValue = helpRandom(collection.length,0,true);
     return collection[randValue];
   };
 

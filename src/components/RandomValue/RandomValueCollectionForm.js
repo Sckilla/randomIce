@@ -1,6 +1,6 @@
 import helpRandomValue from "../../helpers/helpRandomValue";
 import useForm from "../../hooks/useForm";
-import { reArray } from "../../js/regExp";
+import { reArray } from "../../constants/regExp";
 
 const initialFormCollection = {
   values: "a,b,c,d,e,f",
@@ -22,6 +22,7 @@ const RandomValueCollectionForm = ({ handleResponse, str }) => {
 
   return (
     <form>
+      <h3>{str.fromACollection}</h3>
       <div className="input">
         <label htmlFor="values">{str.values}</label>
         <input
@@ -50,8 +51,8 @@ const RandomValueCollectionForm = ({ handleResponse, str }) => {
       >
         {str[error.msg]}
       </div>
-      <div className="input">
-        <button onClick={(e) => handleResponse(handleFormSend(e))}>Go</button>
+      <div className="input button-random">
+        <button onClick={(e) => handleResponse(handleFormSend(e))}>{str.calculate}</button>
       </div>
     </form>
   );

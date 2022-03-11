@@ -20,9 +20,7 @@ const RandomValue = () => {
     <section className={theme + " section-container"}>
       <div className="app-container">
         <h2>{str.randomValue.randomValue}</h2>
-        <h3>{str.randomValue.fromARange}</h3>
         <RandomValueRangeForm handleResponse={handleResponse} str={str.randomValue} />
-        <h3>{str.randomValue.fromACollection}</h3>
         <RandomValueCollectionForm handleResponse={handleResponse} str={str.randomValue} />
         <div className="result">
           Result:

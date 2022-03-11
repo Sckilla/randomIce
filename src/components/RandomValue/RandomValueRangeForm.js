@@ -1,6 +1,6 @@
 import helpRandomValue from "../../helpers/helpRandomValue";
 import useForm from "../../hooks/useForm";
-import { reNumber } from "../../js/regExp";
+import { reNumber } from "../../constants/regExp";
 
 const initialFormRange = {
   minimum: 0,
@@ -16,8 +16,8 @@ const RandomValueRangeForm = ({handleResponse, str}) => {
   } = helpRandomValue();
 
   const {
-    form: formRange,
-    error: errorRange,
+    form,
+    error,
     handleChange,
     handleValidation,
     handleFormSend,
@@ -32,12 +32,13 @@ const RandomValueRangeForm = ({handleResponse, str}) => {
 
   return (  
     <form>
+      <h3>{str.fromARange}</h3>
       <div className="input">
         <label htmlFor="minimum">{str.minimumValue}</label>
         <input
           className={
-            errorRange.badFormatFields.includes("minimum") || 
-            errorRange.badValuesFields.includes("minimum") 
+            error.badFormatFields.includes("minimum") || 
+            error.badValuesFields.includes("minimum") 
             ? "error" 
             : ""
           }
@@ -46,7 +47,7 @@ const RandomValueRangeForm = ({handleResponse, str}) => {
           placeholder="0"
           regexp={reNumber}
           required
-          value={formRange.minimum}
+          value={form.minimum}
           onChange={handleChange}
           onBlur={handleValidation}
         />
@@ -55,8 +56,8 @@ const RandomValueRangeForm = ({handleResponse, str}) => {
         <label htmlFor="maximum">{str.maximumValue}</label>
         <input
           className={
-            errorRange.badFormatFields.includes("maximum") || 
-            errorRange.badValuesFields.includes("maximum") 
+            error.badFormatFields.includes("maximum") || 
+            error.badValuesFields.includes("maximum") 
             ? "error" 
             : ""
           }
@@ -65,7 +66,7 @@ const RandomValueRangeForm = ({handleResponse, str}) => {
           placeholder="10"
           regexp={reNumber}
           required
-          value={formRange.maximum}
+          value={form.maximum}
           onChange={handleChange}
           onBlur={handleValidation}
         />
@@ -74,8 +75,8 @@ const RandomValueRangeForm = ({handleResponse, str}) => {
         <label htmlFor="interval">{str.interval}</label>
         <input
           className={
-            errorRange.badFormatFields.includes("interval") || 
-            errorRange.badValuesFields.includes("interval") 
+            error.badFormatFields.includes("interval") || 
+            error.badValuesFields.includes("interval") 
             ? "error" 
             : ""
           }
@@ -84,23 +85,23 @@ const RandomValueRangeForm = ({handleResponse, str}) => {
           placeholder="1"
           regexp={reNumber}
           required
-          value={formRange.interval}
+          value={form.interval}
           onChange={handleChange}
           onBlur={handleValidation}
         />
       </div>
       <div
         className={
-          errorRange.badFormatFields.length ||
-          errorRange.badValuesFields.length
+          error.badFormatFields.length ||
+          error.badValuesFields.length
             ? "active error message"
             : "message"
         }
       >
-        {str[errorRange.msg]}
+        {str[error.msg]}
       </div>
-      <div className="input">
-        <button onClick={(e) => handleResponse(handleFormSend(e))}>Go</button>
+      <div className="input button-random">
+        <button onClick={(e) => handleResponse(handleFormSend(e))}>{str.calculate}</button>
       </div>
     </form>
   );

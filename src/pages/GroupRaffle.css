@@ -1,0 +1,10 @@
+.group-table{
+  background: var(--dark-background);
+  padding: .5rem;
+  border-radius: 0.6rem;
+  max-width: 100%;
+}
+
+.calculate-form{
+  margin-top: .5rem;
+}

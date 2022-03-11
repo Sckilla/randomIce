@@ -19,11 +19,20 @@ const useForm = (initialForm, valRegex, errRegex, valValues, sendForm, defaultRe
   const [form, setForm] = useState(initialForm);
   const [error, setError] = useState(initialError);
 
+  /*
+  Recieves
+    e: event default
+  */
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleValidation = (e) => {
+  /*
+  Recieves
+    e: event default
+    state: state which can be validated against the new value
+  */
+  const handleValidation = (e, state = null) => {
     let val = [
       {
         name: e.target.name,
@@ -41,11 +50,19 @@ const useForm = (initialForm, valRegex, errRegex, valValues, sendForm, defaultRe
         badFormatFields: valRegexResult,
         badValuesFields: [],
       });
+      return false;
     } else {
-      setError(valValues(form));
+      let valValuesResult =  valValues(form, state);
+      setError(valValuesResult);
+      if(valValuesResult.badValuesFields.length) return false;
     }
+    return true;
   };
 
+  /*
+  Recieves
+    e: event default
+  */
   const handleFormSend = (e) => {
     e.preventDefault();
     if (error.badFormatFields.length === 0 && error.badValuesFields.length === 0) {
@@ -58,6 +75,8 @@ const useForm = (initialForm, valRegex, errRegex, valValues, sendForm, defaultRe
   return {
     form,
     error,
+    setForm,
+    setError,
     handleChange,
     handleValidation,
     handleFormSend,

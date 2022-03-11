@@ -47,3 +47,12 @@ header{
   .header_controls select{
     height: 2rem;
   }
+
+  /* START THEMES */
+  .header_controls img.light{
+    filter: var(--filter-dark-blue);
+  }
+  .header_controls img.dark{
+    filter: var(--filter-white);
+  }
+  /* END THEMES */

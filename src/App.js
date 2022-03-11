@@ -12,6 +12,7 @@ import Roulette from './pages/Roulette';
 import RoundRobin from './pages/RoundRobin';
 import SequenceRaffle from './pages/SequenceRaffle';
 import './pages/style.css';
+import InterchangeRaffleResultView from './pages/InterchangeRaffleResultView';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Header />
             <Routes >
               <Route path='interchangeRaffle' element={<InterchangeRaffle />} />
+              <Route path='interchangeRaffleResultView/:member' element={<InterchangeRaffleResultView />} />
               <Route path='groupRaffle' element={<GroupRaffle />} />
               <Route path='sequenceRaffle' element={<SequenceRaffle />} />
               <Route path='roundRobin' element={<RoundRobin />} />

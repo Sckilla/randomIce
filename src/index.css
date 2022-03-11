@@ -6,6 +6,12 @@
   --white: #eaedee;
   --border: 1.5px;
   --red-error: #c50303;
+  --gray: #757575ff;
+  --dark-background: #00000049;
+  --filter-dark-blue: invert(11%) sepia(35%) saturate(342%) hue-rotate(181deg) brightness(97%) contrast(85%);
+  --filter-white: invert(100%) sepia(1%) saturate(1311%) hue-rotate(168deg) brightness(96%) contrast(95%);
+  --filter-red-error: invert(15%) sepia(100%) saturate(5551%) hue-rotate(20deg) brightness(83%) contrast(128%);
+  /* check filters for svg here https://codepen.io/sosuke/pen/Pjoqqp */
 }
 
 html{
@@ -46,4 +52,8 @@ code {
 
 img{
   height: auto;
+}
+
+.center-box{
+  margin: 0 auto;
 }

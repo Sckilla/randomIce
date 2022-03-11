@@ -1,0 +1,29 @@
+.result-table{
+  margin: 1rem 0;
+  width: 100%;
+  padding: 0 .5rem;
+  border-radius: 0.6rem;
+  background: var(--dark-background);
+}
+
+.result-table th{
+  padding: 1rem 1rem .5rem 1rem;
+  text-align: left;
+}
+
+.result-table th:first-child{
+  padding-left: .5rem;
+}
+
+.result-table td{
+  padding-left: 1.5rem;
+  text-align: left;
+}
+
+.result-table td:first-child{
+  padding-left: 1rem;
+}
+
+.result-table .input{
+  padding: 0;
+}

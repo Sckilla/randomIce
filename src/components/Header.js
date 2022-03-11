@@ -22,8 +22,8 @@ const Header = () => {
       <img className="logo_img" src={logo} alt="logo" onClick={handleNavigateMainPage} />
       <h1 className={theme+" randomice_title"} onClick={handleNavigateMainPage} >Random<span>Ice</span></h1>
       <div className='header_controls'>
-          {theme==='light' && <img src={icoThemeDark} alt="App theme" onClick={handleTheme} />}
-          {theme==='dark' && <img src={icoThemeLight} alt="App theme" onClick={handleTheme} />}
+          {theme==='light' && <img className='light' src={icoThemeDark} alt="App theme" onClick={handleTheme} />}
+          {theme==='dark' && <img className='dark' src={icoThemeLight} alt="App theme" onClick={handleTheme} />}
           <CustomSelect selname="selLanguage" options={languages} state={str.lang} handleChange={handleLanguage} theme={theme} />
       </div>
     </header>

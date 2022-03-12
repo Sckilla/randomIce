@@ -5,6 +5,7 @@ const rePositiveNumber = "^((.d+)|(\\d+(.\\d+)?))$";
 const reArray = "^(([a-zA-Z0-9]+)|(-?\\d+))(,(([a-zA-Z0-9]+)|(-?\\d+)))+$";
 const reName = "^([a-zA-ZÀ-ÿñÑ]+)(\\s[a-zA-ZÀ-ÿñÑ]+)*$";
 const reNameEmpty = "^$|^([a-zA-ZÀ-ÿñÑ]+)(\\s[a-zA-ZÀ-ÿñÑ]+)*$";
+const reWordNumEmpty = "^$|^([0-9a-zA-ZÀ-ÿñÑ]+)(\\s[0-9a-zA-ZÀ-ÿñÑ]+)*$";
 
 export{
   reInteger,
@@ -14,4 +15,5 @@ export{
   reArray,
   reName,
   reNameEmpty,
+  reWordNumEmpty,
 }

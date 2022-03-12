@@ -8,7 +8,7 @@ import Dice from './pages/Dice';
 import GroupRaffle from './pages/GroupRaffle';
 import InterchangeRaffle from './pages/InterchangeRaffle';
 import RandomValue from './pages/RandomValue';
-import Roulette from './pages/Roulette';
+//import Roulette from './pages/Roulette';
 import RoundRobin from './pages/RoundRobin';
 import SequenceRaffle from './pages/SequenceRaffle';
 import './pages/style.css';
@@ -29,7 +29,7 @@ function App() {
               <Route path='roundRobin' element={<RoundRobin />} />
               <Route path='randomValue' element={<RandomValue />} />
               <Route path='dice' element={<Dice />} />
-              <Route path='roulette' element={<Roulette />} />
+              {/* <Route path='roulette' element={<Roulette />} /> */}
               <Route exact path='/' element={<MainMenu />} />
               <Route path='*' element={<Error404 />} />
             </Routes>

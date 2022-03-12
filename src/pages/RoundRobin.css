@@ -1,0 +1,9 @@
+.round-robin-list{
+  margin: 0 auto;
+}
+
+.round-robin-result h3{
+  color: var(--cyan);
+  text-align: center;
+  margin: 0 auto;
+}

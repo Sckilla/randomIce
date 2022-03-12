@@ -24,7 +24,7 @@ const SequenceRaffle = () => {
     <section className={theme + " section-container"}>
       <div className="app-container">
         <h2>{str.sequenceRaffle.sequenceRaffle}</h2>
-        <p>Instructions</p>
+        <p>{str.sequenceRaffle.instructions}</p>
         <SequenceRaffleData
           str={str.sequenceRaffle}
           members={members}

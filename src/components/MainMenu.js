@@ -72,16 +72,6 @@ const MainMenu = () => {
               />  
             </Link>
           </li>
-          <li>
-            <Link to="/roulette">
-              <MainMenuOption 
-                option={str.mainMenu.roulette}
-                description={str.mainMenu.rouletteDes}
-                color="normal"
-                theme={theme}
-              />
-            </Link>
-          </li>
         </ul>
       </nav>
     </section>

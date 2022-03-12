@@ -2,7 +2,7 @@ import { createContext, useState } from "react";
 
 const LanguageContext = createContext();
 
-const initialLanguage = 'en';
+const initialLanguage = 'es';
 export const languages = [
   {
     value:'en',
@@ -71,7 +71,7 @@ const strings = {
     },
     groupRaffle:{
       groupRaffle: 'Group raffle',
-      instructions: 'Instructions',
+      instructions: 'To do a group raffle, first create a collection of members by adding their names or upload a previous saved collection, then choose a raffle type, set the parameter and click the calculate button to obtain the groups randomly, you can raffle as many times you want',
       members: "Members",
       infoNoMembersAdded: "No members added",
       form:{
@@ -116,6 +116,7 @@ const strings = {
     },
     sequenceRaffle:{
       sequenceRaffle: 'Sequence raffle',
+      instructions: 'To do a sequence raffle, first create a collection of members by adding their names or upload a previous saved collection, then click the calculate button to obtain the random order for the members, you can raffle as many times you want',
       members: "Members",
       infoNoMembersAdded: "No members added",
       calculate: 'Calculate',
@@ -144,6 +145,30 @@ const strings = {
     },
     roundRobin:{
       roundRobin: 'Round robin',
+      instructions: 'To do a round robin, first create a collection of items by adding them one by one or upload a previous saved collection, then click the start button, then you can click the button next random to get a random item and discard it from the list, repeat until the list is empty',
+      members: "Items collection",
+      infoNoMembersAdded: "No items added",
+      start: 'Start',
+      nextRandom: 'Next random',
+      emptyList: 'All the items have been raffled, click start again or choose another collection',
+      form:{
+        addAMember: "Add an item",
+        name: "Item",
+        add: 'Add',
+        errorFields: 'The item is not valid',
+      },
+      loadMembers:{
+        loadFromSaves:'Load from saves',
+        infoNoDataSaved:'No collections saved',
+        load:'Load',
+        delete:'Delete',
+      },
+      saveMembers:{
+        errorRepitedState: 'This name has been already used',
+        errorActionReplace: 'Click here to replace it',
+        saveState: 'Save collection',
+        saveStateAs: 'Save collection as',
+      },
     },
     randomValue:{
       randomValue: 'Random Value',
@@ -224,7 +249,7 @@ const strings = {
     },
     groupRaffle:{
       groupRaffle: 'Sorteo de Grupos',
-      instructions: 'Instrucciones',
+      instructions: 'Para hacer un sorteo de grupos, primero crea una lista de miembros agregando sus nombres o carga una lista previamente guardada, después elige un tipo de sorteo, ajusta el parámetro y haz click en el botón de calcular para obtener los grupos de forma aleatoria, puedes sortear cuantas veces quieras',
       members: "Integrantes",
       infoNoMembersAdded: "No se han registrado integrantes",
       form:{
@@ -269,6 +294,7 @@ const strings = {
     },
     sequenceRaffle:{
       sequenceRaffle: 'Sorteo de orden',
+      instructions: 'Para hacer un sorteo de orden o secuencia, primero crea una lista de miembros agregando sus nombres o carga una lista previamente guardada, después haz click en el botón de calcular para obtener el un orden aleatorio para los miembros, puedes sortear cuantas veces quieras',
       members: "Integrantes",
       infoNoMembersAdded: "No se han agregado integrantes",
       calculate: 'Calcular',
@@ -297,6 +323,30 @@ const strings = {
     },
     roundRobin:{
       roundRobin: 'Sorteo por turnos',
+      instructions: 'Para hacer un sorteo por turnos, primero crea una lista de elementos agregandolos uno por uno o carga una lista previamente guardada, después haz click en el botón iniciar, después podrás hacer click en el botón siguiente aleatorio para obtener un elemento aleatorio y descartarlo de la lista, esto se repetirá hasta dejar la lista vacía',
+      members: "Lista de elementos",
+      infoNoMembersAdded: "No se han agregado elementos",
+      start: 'Iniciar',
+      nextRandom: 'Siguiente aleatorio',
+      emptyList: 'Todos los elementos han sido sorteados, vuelve a iniciar o usa otra lista de elementos',
+      form:{
+        addAMember: "Agrega un elemento",
+        name: "Elemento",
+        add: 'Agregar',
+        errorFields: 'El item no es válido',
+      },
+      loadMembers:{
+        loadFromSaves:'Cargar desde guardados',
+        infoNoDataSaved:'No hay listas guardadas',
+        load:'Cargar',
+        delete:'Eliminar',
+      },
+      saveMembers:{
+        errorRepitedState: "Ya existe un sorteo guardado con este nombre",
+        errorActionReplace: "Haz clic aquí para reemplazar",
+        saveState: "Guardar lista",
+        saveStateAs: "Guardar lista como",
+      },
     },
     randomValue:{ 
       randomValue: 'Valor aleatorio',

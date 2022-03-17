@@ -1,5 +1,7 @@
-# Getting Started with Create React App
+# RandomIce
 
+This project is a client side web app that generates random numbers, picks random values form collections, create random groups, orders and more.
+This project was created with the react library.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
